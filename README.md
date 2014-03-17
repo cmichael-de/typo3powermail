@@ -1,6 +1,9 @@
 typo3powermail
 ==============
 
+Styles (css)
+--------------
+
 .form-control:focus {
   border-color: #B3B3B3;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(201, 201, 201, 1);
