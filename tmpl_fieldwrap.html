@@ -39,9 +39,13 @@ Powermail HTML Template for fieldwraps
 Fieldwrap for Text fields like <input type="text" />
 
 <!-- ###POWERMAIL_FIELDWRAP_HTML_TEXT### begin -->
-	<div id="powermaildiv_uid###POWERMAIL_FIELD_UID###" class="tx_powermail_pi1_fieldwrap_html tx_powermail_pi1_fieldwrap_html_text tx_powermail_pi1_fieldwrap_html_###POWERMAIL_FIELD_UID### ###ALTERNATE###"###DIVJS###>
-		<label for="###LABEL_NAME###">###LABEL######DESCRIPTION######MANDATORY_SYMBOL###</label>
-		<input type="text" ###ONFOCUS######NAME######VALUE######CLASS######ID######SIZE######MAXLENGTH######READONLY######TABINDEX######ACCESSKEY######JS###/>
+	<div id="powermaildiv_uid###POWERMAIL_FIELD_UID###" class="form-group has-feedback" ###DIVJS###>
+          <label for="###LABEL_NAME###" class="col-sm-2 control-label">###LABEL######DESCRIPTION######MANDATORY_SYMBOL###</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="###LABEL###" data-validate="###LABEL_NAME###"  ###ONFOCUS######NAME######VALUE######ID######SIZE######MAXLENGTH######READONLY######TABINDEX######ACCESSKEY######JS###/>
+            <span class="fa fa-check form-control-feedback"></span>
+            <span class="fa fa-times form-control-feedback"></span>            
+          </div>
 	</div>
 <!-- ###POWERMAIL_FIELDWRAP_HTML_TEXT### end -->
 
@@ -55,9 +59,13 @@ Fieldwrap for Textareas like <textarea>
 	###WRAP###			Textwrapping for textarea
 
 <!-- ###POWERMAIL_FIELDWRAP_HTML_TEXTAREA### begin -->
-	<div id="powermaildiv_uid###POWERMAIL_FIELD_UID###" class="tx_powermail_pi1_fieldwrap_html tx_powermail_pi1_fieldwrap_html_textarea tx_powermail_pi1_fieldwrap_html_###POWERMAIL_FIELD_UID### ###ALTERNATE###"###DIVJS###>
-		<label for="###LABEL_NAME###">###LABEL######DESCRIPTION######MANDATORY_SYMBOL###</label>
-		<textarea ###NAME######CLASS######ID######ROWS######COLS######WRAP######ONFOCUS######MAXLENGTH######READONLY######TABINDEX######ACCESSKEY######JS###>###VALUE###</textarea>
+	<div id="powermaildiv_uid###POWERMAIL_FIELD_UID###" class="form-group has-feedback"###DIVJS###>
+		<label class="col-sm-2 control-label" for="###LABEL_NAME###">###LABEL######DESCRIPTION######MANDATORY_SYMBOL###</label>
+                <div class="col-sm-10">
+	                <textarea class="form-control" rows="5" placeholder="###LABEL###" ###NAME######ID######ROWS######COLS######WRAP######ONFOCUS######MAXLENGTH######READONLY######TABINDEX######ACCESSKEY######JS###>###VALUE###</textarea>
+                        <span class="fa fa-check form-control-feedback"></span>
+                        <span class="fa fa-times form-control-feedback"></span>            
+	        </div>
 	</div>
 <!-- ###POWERMAIL_FIELDWRAP_HTML_TEXTAREA### end -->
 
@@ -183,9 +191,11 @@ Fieldwrap for captcha request
 
 Fieldwrap for submit buttons like <input type="submit" />
 <!-- ###POWERMAIL_FIELDWRAP_HTML_SUBMIT### begin -->
-	<div id="powermaildiv_uid###POWERMAIL_FIELD_UID###" class="tx_powermail_pi1_fieldwrap_html tx_powermail_pi1_fieldwrap_html_submit tx_powermail_pi1_fieldwrap_html_###POWERMAIL_FIELD_UID### ###ALTERNATE###"###DIVJS###>
-		<input type="submit" ###VALUE######CLASS######TABINDEX######ACCESSKEY######JS###/>
-	</div>
+        <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10" id="powermaildiv_uid###POWERMAIL_FIELD_UID###">
+                        <button type="submit" class="btn btn-default">###LABEL###</button>
+                </div>
+        </div>
 <!-- ###POWERMAIL_FIELDWRAP_HTML_SUBMIT### end -->
 
 
